@@ -1,0 +1,51 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, const char * argv[]) {
+    
+    string userName;
+    string userPassword;
+    int loginAttempt = 0;
+    
+    while (loginAttempt < 5)
+    {
+        cout << "Please enter your username: ";
+        cout << " " << endl;
+        cin >> userName;
+        cout << "Please enter your password: ";
+        cout << " " << endl;
+        cin >> userPassword;
+        
+        if (userName == "peteroseterhaab" && userPassword == "peteroseterhaab")
+        {
+            cout << "Welcome Peter!\n";
+            cout << " " << endl;
+            break;
+        }
+        else if (userName == "vkb24312" && userPassword == "vkb24312")
+        {
+            cout << "Welcome Vincent!\n";
+            cout << " " << endl;
+            break;
+        }
+        else
+        {
+            cout << "Invalid login attempt. Please try again.\n" << '\n';
+            loginAttempt++;
+            cout << " " << endl;
+        }
+    }
+    if (loginAttempt == 5)
+    {
+        cout << "Too many login attempts! The program will now terminate.";
+        cout << " " << endl;
+        return 0;
+    }
+    
+    cout << "Thank you for logging in.\n";
+    cout << " " << endl;
+    
+    return 0;
+}
